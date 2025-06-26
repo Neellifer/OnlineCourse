@@ -41,7 +41,7 @@
 </head>
 <body class="min-h-screen flex flex-col">
 
-    <!-- Header Section (can be reused from main page or simplified) -->
+    <!-- Header Section -->
     <header class="bg-white shadow-sm py-4 px-4 sm:px-6 lg:px-8 sticky top-0 z-50 rounded-b-lg">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <!-- Logo/Site Title -->
@@ -55,4 +55,190 @@
             <!-- Navigation Links -->
             <nav class="hidden md:flex space-x-8">
                 <a href="index.html" class="text-gray-600 hover:text-indigo-600 font-medium py-2 px-3 rounded-md transition duration-300 ease-in-out hover:bg-gray-100">Home</a>
-                <a href="index.html" class="text-gray-600 hover:text-indigo-600 font-medium p
+                <a href="index.html#courses" class="text-gray-600 hover:text-indigo-600 font-medium py-2 px-3 rounded-md transition duration-300 ease-in-out hover:bg-gray-100">Courses</a>
+                <a href="about.html" class="text-gray-600 hover:text-indigo-600 font-medium py-2 px-3 rounded-md transition duration-300 ease-in-out hover:bg-gray-100">About Us</a>
+                <a href="register.html" class="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition duration-300 ease-in-out font-medium shadow-md">Register</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-600 hover:text-indigo-600 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2 px-4 py-3 bg-white rounded-lg shadow-lg">
+            <a href="index.html" class="block text-gray-700 hover:text-indigo-600 font-medium px-3 py-2 rounded-md hover:bg-gray-50">Home</a>
+            <a href="index.html#courses" class="block text-gray-700 hover:text-indigo-600 font-medium px-3 py-2 rounded-md hover:bg-gray-50">Courses</a>
+            <a href="about.html" class="block text-gray-700 hover:text-indigo-600 font-medium px-3 py-2 rounded-md hover:bg-gray-50">About Us</a>
+            <a href="register.html" class="w-full px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition duration-300 ease-in-out font-medium shadow-md mt-2">Register</a>
+        </div>
+    </header>
+
+    <!-- Main Content Area for Course Details -->
+    <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="bg-white rounded-xl shadow-lg p-8 md:p-12">
+            <div class="flex flex-col md:flex-row gap-8">
+                <!-- Course Image -->
+                <div class="md:w-1/3">
+                    <img id="course-image" src="https://placehold.co/800x450/a78bfa/ffffff?text=Course+Image" alt="Course Image" class="w-full h-auto rounded-lg shadow-md object-cover">
+                </div>
+
+                <!-- Course Info -->
+                <div class="md:w-2/3">
+                    <h1 id="course-title" class="text-4xl font-extrabold text-gray-900 mb-4">Full-Stack Web Development</h1>
+                    <p id="course-short-description" class="text-lg text-gray-600 mb-6">Master front-end and back-end development with this comprehensive course.</p>
+
+                    <div class="flex items-center justify-between mb-6 border-b pb-4">
+                        <div class="flex items-center space-x-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4.01 4.01 0 00-2.828 0m-4.326 3.013l.995 1.503M21 12h-3m-6 8.646a4.01 4.01 0 01-2.828 0m-4.326-3.013L3 12h-.012M12 4.354a4.01 4.01 0 012.828 0m4.326 3.013l-.995 1.503M12 21.646a4.01 4.01 0 002.828 0m4.326-3.013L21 12h.012M9 12a3 3 0 11-6 0 3 3 0 016 0zM12 9a3 3 0 110 6 3 3 0 010-6zM15 12a3 3 0 116 0 3 3 0 01-6 0z" />
+                            </svg>
+                            <span id="course-instructor" class="text-gray-700 font-medium">By Jane Doe</span>
+                        </div>
+                        <div class="text-3xl font-bold text-indigo-700" id="course-price">$49.99</div>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-900 mb-3">Course Description</h2>
+                    <p id="course-full-description" class="text-gray-700 leading-relaxed mb-6">
+                        This comprehensive Full-Stack Web Development course will take you from a beginner to a proficient web developer. You will learn the essential technologies for both front-end (HTML, CSS, JavaScript, React) and back-end (Node.js, Express, Databases like MongoDB/PostgreSQL). The course emphasizes hands-on projects, ensuring you build a strong portfolio ready for the job market.
+                    </p>
+
+                    <h2 class="text-2xl font-bold text-gray-900 mb-3">What You'll Learn</h2>
+                    <ul class="list-disc list-inside text-gray-700 mb-6 space-y-2">
+                        <li>Build responsive and interactive user interfaces with React.</li>
+                        <li>Develop robust server-side applications using Node.js and Express.</li>
+                        <li>Manage and query databases effectively (SQL and NoSQL).</li>
+                        <li>Implement user authentication and authorization.</li>
+                        <li>Deploy full-stack applications to cloud platforms.</li>
+                    </ul>
+
+                    <h2 class="text-2xl font-bold text-gray-900 mb-3">Requirements</h2>
+                    <ul class="list-disc list-inside text-gray-700 mb-8 space-y-2">
+                        <li>Basic computer literacy.</li>
+                        <li>No prior programming experience required.</li>
+                        <li>A computer with internet access.</li>
+                    </ul>
+
+                    <button class="w-full bg-indigo-600 text-white py-4 rounded-lg text-xl font-semibold hover:bg-indigo-700 transition duration-300 shadow-lg transform hover:scale-105"
+                        onclick="window.location.href='confirmation.html?type=enrollment&item=' + encodeURIComponent(document.getElementById('course-title').textContent);">
+                        Enroll Now for $49.99
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-gray-300 py-12 rounded-t-xl mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- Company Info -->
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4">LearnSphere</h3>
+                <p class="text-gray-400 text-sm mb-2">Your gateway to unlimited learning.</p>
+                <p class="text-gray-400 text-sm">123 Learning Lane, Knowledge City, LC 90210</p>
+                <p class="text-gray-400 text-sm mt-2">Email: info@learnsphere.com</p>
+                <p class="text-gray-400 text-sm">Phone: +1 (555) 123-4567</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-lg font-semibold text-white mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-200">Home</a></li>
+                    <li><a href="index.html#courses" class="text-gray-400 hover:text-white transition duration-200">Courses</a></li>
+                    <li><a href="about.html" class="text-gray-400 hover:text-white transition duration-200">About Us</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-200">Privacy Policy</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-200">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <!-- Categories -->
+            <div>
+                <h3 class="text-lg font-semibold text-white mb-4">Categories</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-200">Web Development</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-200">Data Science</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-200">Digital Marketing</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-200">Graphic Design</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-200">Business & Finance</a></li>
+                </ul>
+            </div>
+
+            <!-- Social Media -->
+            <div>
+                <h3 class="text-lg font-semibold text-white mb-4">Connect With Us</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.25H7.5V12h2.938V9.75c0-3.13 1.889-4.858 4.71-4.858 1.353 0 2.29.1 2.593.149V7.5h-1.879c-1.863 0-2.228.882-2.228 2.183V12h3.295l-.531 2.25h-2.764v7.629C18.343 21.128 22 16.991 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22 6.492a8.03 8.03 0 01-2.358.646A4.023 4.023 0 0021.653 4.1a8.07 8.07 0 01-2.583.987A4.015 4.015 0 0015.424 2c-2.203 0-3.99 1.796-3.99 4s1.787 4 3.99 4c.48 0 .94-.105 1.37-.282A11.393 11.393 0 017.397 7.026c-.463 2.05-.205 4.298 1.139 6.07a4.032 4.032 0 01-1.82-.505v.05c0 1.942 1.38 3.565 3.204 3.93A4.015 4.015 0 019.29 17.75c-.39 0-.77-.04-.113-.01v-.05c.504 1.583 1.956 2.748 3.684 2.78A8.04 8.04 0 0020.218 19c-1.394 0-2.67-.406-3.76-1.107A11.37 11.37 0 0022 6.492z"/></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07c3.252.148 4.779 1.624 4.931 4.774.058 1.265.07 1.645.07 4.85s-.012 3.584-.07 4.85c-.148 3.252-1.624 4.779-4.774 4.931-1.265.058-1.645.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.779-1.624-4.931-4.774-.058-1.265-.07-1.645-.07-4.85s.012-3.584.07-4.85c.148-3.252 1.624-4.779 4.774-4.931 1.265-.058 1.645-.07 4.85-.07zm0 2.116c-3.267 0-3.655.013-4.947.071-2.906.131-3.992 1.056-4.123 3.961-.059 1.293-.071 1.681-.071 4.947s.013 3.655.071 4.947c.131 2.906 1.056 3.992 3.961 4.123 1.293.059 1.681.071 4.947.071s3.655-.013 4.947-.071c2.906-.131 3.992-1.056 4.123-3.961.059-1.293.071-1.681.071-4.947s-.013-3.655-.071-4.947c-.131-2.906-1.056-3.992-3.961-4.123-1.293-.059-1.681-.071-4.947-.071zm0 2.879c-2.404 0-4.359 1.955-4.359 4.359s1.955 4.359 4.359 4.359 4.359-1.955 4.359-4.359-1.955-4.359-4.359-4.359zm0 7.16c-1.545 0-2.801-1.256-2.801-2.801s1.256-2.801 2.801-2.801 2.801 1.256 2.801 2.801-1.256 2.801-2.801 2.801zm5.22-.507c0 .795-.644 1.439-1.439 1.439s-1.439-.644-1.439-1.439.644-1.439 1.439-1.439 1.439.644 1.439 1.439z"/></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M16.985 2c.002-.096.002-.204.002-.312 0-.256-.008-.512-.024-.768-.024-.256-.064-.512-.128-.768-.064-.256-.152-.512-.272-.768-.12-.256-.272-.512-.456-.768-.184-.256-.408-.512-.672-.768-.264-.256-.576-.512-.936-.768-.36-.256-.768-.512-1.224-.768-.456-.256-.96-.512-1.512-.768-.552-.256-1.152-.512-1.8-.768-2.616-.512-5.328-.512-7.944 0-1.816.352-3.488.944-4.824 1.832-.864.576-1.536 1.2-2.016 1.872-.48.672-.792 1.44-.936 2.296-.144.856-.144 1.76-.048 2.688.096.928.32 1.832.672 2.712.352.88.8 1.712 1.344 2.496.544.784 1.184 1.512 1.92 2.184.736.672 1.568 1.28 2.496 1.824.928.544 1.952 0.992 3.072 1.344 1.12.352 2.336.56 3.648.616 1.312.056 2.696.024 4.152-.096 1.456-.12 2.928-.368 4.416-.744.752-.192 1.5-.432 2.224-.728.72-.296 1.416-.648 2.088-1.056.672-.408 1.304-.88 1.896-1.416.592-.536 1.136-1.128 1.632-1.776.496-.648.928-1.352 1.296-2.096.368-.744.664-1.52.888-2.32.224-.8.384-1.616.48-2.448.096-.832.128-1.648.096-2.448-.032-.8-.144-1.56-.336-2.28-.192-.72-.472-1.392-.84-2.016-.368-.624-.824-1.192-1.368-1.704-.544-.512-1.168-.96-1.872-1.344-.704-.384-1.488-.696-2.352-.936-.864-.24-1.784-.392-2.76-.456zM8 12c0 2.209 1.791 4 4 4s4-1.791 4-4-1.791-4-4-4-4 1.791-4 4z" /></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-gray-500 text-sm mt-8">
+            &copy; 2025 LearnSphere. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle (reused from main page)
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', (event) => {
+            const isClickInsideMenu = mobileMenu.contains(event.target) || mobileMenuButton.contains(event.target);
+            if (!isClickInsideMenu && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Function to populate course details from URL parameters (if any)
+        // In a real application, you would fetch data from a backend based on a course ID
+        function loadCourseDetailsFromUrl() {
+            const params = new URLSearchParams(window.location.search);
+            const courseTitle = params.get('title') || 'Full-Stack Web Development';
+            const courseDescription = params.get('description') || 'This comprehensive Full-Stack Web Development course will take you from a beginner to a proficient web developer. You will learn the essential technologies for both front-end (HTML, CSS, JavaScript, React) and back-end (Node.js, Express, Databases like MongoDB/PostgreSQL). The course emphasizes hands-on projects, ensuring you build a strong portfolio ready for the job market.';
+            const coursePrice = params.get('price') || '49.99';
+            const courseInstructor = params.get('instructor') || 'Jane Doe';
+            const courseImage = params.get('image') || 'https://placehold.co/800x450/a78bfa/ffffff?text=Course+Image';
+
+            document.getElementById('course-title').textContent = courseTitle;
+            document.getElementById('course-short-description').textContent = courseDescription.split('.')[0] + '.'; // Take first sentence as short description
+            document.getElementById('course-full-description').textContent = courseDescription;
+            document.getElementById('course-price').textContent = `$${coursePrice}`;
+            document.getElementById('course-instructor').textContent = `By ${courseInstructor}`;
+            document.getElementById('course-image').src = courseImage;
+            document.getElementById('course-image').alt = `${courseTitle} Image`;
+
+            // Update the "Enroll Now" button text
+            const enrollButton = document.querySelector('.main-content-area button');
+            enrollButton.textContent = `Enroll Now for $${coursePrice}`;
+            // Update the onclick to pass the dynamic course title
+            enrollButton.setAttribute('onclick', `window.location.href='confirmation.html?type=enrollment&item=' + encodeURIComponent(document.getElementById('course-title').textContent);`);
+        }
+
+        // Call the function when the page loads
+        window.onload = loadCourseDetailsFromUrl;
+    </script>
+</body>
+</html>
